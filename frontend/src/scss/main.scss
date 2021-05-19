@@ -1,0 +1,110 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size:62.5% //10px == 1rem
+}
+
+body {
+    height:100vh;
+    font: 1.6rem Helvetica, Arial;
+    margin: 0;
+    padding: 0;
+}
+
+/////////////////HEADER
+.grid-container {
+    height:100%;
+    display: grid;
+    grid-template-areas: 
+    'header'
+    'main'
+    'footer';
+    
+    grid-template-columns: 1fr;
+    grid-template-rows: 5rem 1fr 5rem;
+}
+
+header {
+    padding:1rem;
+    grid-area: header;
+    background-color: #203040;
+    color: white;
+    a,
+    a:link,
+    a:visited {
+        text-decoration: none;
+        color:white;
+        
+    }
+    font-weight: bold;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+
+    a:hover {
+        color: orange;
+    }
+}
+
+.brand {
+    font-size: 3rem;
+}
+
+/////////////////////// Footer 
+footer {
+    background-color: #203040;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:white;
+}
+
+/////////////////////Main
+.products { // 전체 ul
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+        flex: 0 1 30rem;
+        margin:1rem;
+        height:42rem;
+        border-top:0.2rem solid #e0e0e0;
+        // padding-top:2rem;
+    }
+}
+
+.product {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height:100%;
+
+    a {
+        text-decoration: none;
+        color:black;
+    }
+    &-img {
+        max-width:22rem;
+        max-height:26rem;
+        margin-top: 2rem;        
+    }
+
+    &-name {
+        line-height: 2.2rem;
+    }
+
+    &-brand {
+        font-size: 1.2rem;
+        color: #808080;
+    }
+    &-price {
+        font-size: 2rem;
+
+    }
+}
