@@ -1,8 +1,14 @@
 import data from '../data.js';
 
 const HomeScreen = {
-    render: ()=>{
-        const products = data.products;
+    render: async()=>{
+        const response = await fetch("http://localhost:5000/api/products");
+        
+        if (!response || !response.ok){
+            return `<div>response Error Page</div>`;
+        }
+        const products = await response.json();
+        
         return `
         <div>
             <ul class="products"> 
