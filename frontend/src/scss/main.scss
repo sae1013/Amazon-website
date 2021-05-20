@@ -54,7 +54,7 @@ header {
 
 /////////////////////// Footer 
 footer {
-    background-color: #203040;
+    background-color:#203040;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -107,4 +107,14 @@ footer {
         font-size: 2rem;
 
     }
+}
+
+/* Rating */
+.rating {
+    color:rgb(150, 150, 34);
+    font-size: 1.5rem;
+}
+.rating span:last-child {
+    font-size: 1.2rem;
+    color: grey;
 }

@@ -1,4 +1,4 @@
-import data from '../data.js';
+import Rating from '../components/Rating';
 
 const HomeScreen = {
     render: async()=>{
@@ -8,6 +8,7 @@ const HomeScreen = {
             return `<div>response Error Page</div>`;
         }
         const products = await response.json();
+        console.log(products);
         
         return `
         <div>
@@ -22,6 +23,9 @@ const HomeScreen = {
                             <a href="#">
                                 ${product.name}
                             </a>
+                        </div>
+                        <div class="product-rating">
+                            ${Rating.render({rating : product.rating, review:`${product.numReviews} Reviews`})}
                         </div>
                         <div class="product-brand">
                             ${product.brand}
