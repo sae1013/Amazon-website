@@ -18,9 +18,8 @@ const router = async()=>{
     
     const screen = routes[parseUrl] ? routes[parseUrl] : Error404Screen;
     const mainContainer = document.querySelector('#main-container');
-    
-    mainContainer.innerHTML = await screen.render();
-    
+    mainContainer.innerHTML = await screen.render(); // 돔 생성 이후
+    await screen.after_render(); // 이벤트 핸들러 적용
     
 }
 

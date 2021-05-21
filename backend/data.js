@@ -10,6 +10,7 @@ export default {
         rating: 4.5,
         numReviews: 10,
         countInStock: 6,
+        description:'Cool Jacket'
       },
       {
         _id: '2',
@@ -20,6 +21,7 @@ export default {
         brand: 'Nike',
         rating: 5,
         numReviews: 51,
+        description:'Cool Jacket'
       },
       {
         _id: '3',
@@ -30,6 +32,7 @@ export default {
         brand: 'Adidas',
         rating: 4,
         numReviews: 45,
+        description:'Cool Jacket'
       },
       {
         _id: '4',
@@ -41,6 +44,7 @@ export default {
         rating: 2.5,
         numReviews: 198,
         countInStock: 6,
+        description:'Cool Jacket'
       },
       {
         _id: '5',
@@ -52,6 +56,7 @@ export default {
         rating: 3.5,
         numReviews: 89,
         countInStock: 6,
+        description:'Cool Jacket'
       },
       {
         _id: '6',
@@ -63,6 +68,7 @@ export default {
         rating: 4.5,
         numReviews: 45,
         countInStock: 6,
+        description:'Cool Jacket'
       },
     ],
   };
